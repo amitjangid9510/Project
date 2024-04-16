@@ -13,6 +13,11 @@
     },
     {
       "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "methods": ["POST"],
+      "dest": "index.js"
     }
   ]
 }
