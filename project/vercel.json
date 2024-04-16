@@ -7,17 +7,7 @@
     }
   ],
   "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "methods": ["POST"],
-      "dest": "index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "index.js"
-    }
+    { "src": "/(.*)", "dest": "index.js" },
+    {"src": "/registeruser","methods": ["POST"],"dest": "index.js"}
   ]
 }
