@@ -9,9 +9,10 @@
   "routes": [
     {
       "src": "/(.*)",
-      "methods": ["POST"],
       "dest": "index.js"
     },
-    { "handle": "filesystem" }
+    {
+      "handle": "filesystem"
+    }
   ]
 }
