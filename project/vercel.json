@@ -11,6 +11,7 @@
       "src": "/(.*)",
       "methods": ["POST"],
       "dest": "index.js"
-    }
+    },
+    { "handle": "filesystem" }
   ]
 }
