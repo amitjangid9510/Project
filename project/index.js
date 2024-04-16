@@ -1,0 +1,18 @@
+const dotenv = require('dotenv');
+dotenv.config({
+    path: './.env'
+});
+
+
+const  connectDb  = require("./src/db/connectDb.js");
+const app = require("./app.js")
+
+
+console.log("agya maie");
+connectDb()
+.then(()=>{ app.listen(process.env.PORT || 8000 ,()=>{
+    console.log(`MONGO_DB_CONNECTED on port number ${process.env.PORT}` );
+})})
+.catch((err)=>{
+    console.log("Mongo_db connection failed !!!! " , err);
+})

@@ -1,0 +1,24 @@
+
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "index.js" },
+    {
+      "src": "/api/registeruser",
+      "methods": ["POST"],
+      "dest": "/src/controllers/user.controllers.js"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/temp/(.*)",
+      "destination": "/src/controllers/user.controllers.js"
+    }
+  ]
+}
