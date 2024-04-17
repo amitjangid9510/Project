@@ -6,7 +6,7 @@ export default defineConfig({
   
   server: {
     proxy: {
-      //'/api':'https://backend-virid.vercel.app/user',
+      '/api':'https://backend-virid.vercel.app/user',
     }
   },
   plugins: [react()],

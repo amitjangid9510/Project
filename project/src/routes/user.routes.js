@@ -13,11 +13,11 @@ const userRouter = Router()
 
 //Routes....
 
-userRouter.post("/api/registeruser", uploadMiddleware , registerUser);
-userRouter.post("/api/login" ,logIn)
-userRouter.post("/api/logout" ,verifyJWT , logOut)
-userRouter.post("/api/genraterft" ,refreshAccessToken)
-userRouter.post("/api/getuser" ,verifyJWT, getCurrentUser)
+userRouter.post("/registeruser", uploadMiddleware , registerUser);
+userRouter.post("/login" ,logIn)
+userRouter.post("/logout" ,verifyJWT , logOut)
+userRouter.post("/genraterft" ,refreshAccessToken)
+userRouter.post("/getuser" ,verifyJWT, getCurrentUser)
 
 module.exports = userRouter;
 
