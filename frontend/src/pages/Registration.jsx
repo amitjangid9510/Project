@@ -12,7 +12,7 @@ function Registration() {
   const Register = async(data)=>{
     try {
       console.log(data);
-      await axios.post('/api/registeruser',{
+      await axios.post('https://backend-virid.vercel.app/user/api/registeruser',{
         avatar : data.avatar[0],
         firstname : data.firstname, 
         lastname : data.lastname, 
