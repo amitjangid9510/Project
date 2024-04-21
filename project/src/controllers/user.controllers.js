@@ -83,8 +83,8 @@ exports.registerUser = asyncHandler(async (req, res) => {
 exports.logIn = asyncHandler( async(req , res)=>{
   const { phoneNumber , password } = req.body
 
-  if (!(phoneNumber)) {
-    return sendResponse(res , 400 , null , 'username or email is required' )
+  if (!phoneNumber) {
+    return sendResponse(res , 400 , null , 'Phone Number is required' )
   }
 
  const User = await user.findOne({ phoneNumber: phoneNumber })
