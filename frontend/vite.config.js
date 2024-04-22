@@ -6,7 +6,7 @@ export default defineConfig({
   server : {
     proxy: {
       '/api': {
-        target: 'http://localhost:7000/user', 
+        target: 'https://backend-virid.vercel.app/user', 
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
