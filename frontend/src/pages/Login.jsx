@@ -15,7 +15,7 @@ function Login() {
 
   const loginUser = async (data) => {
     try {
-    const response = await axios.post('/api/login', {phoneNumber: data.phoneNumber, password : data.password});
+    const response = await axios.post('https://backend-virid.vercel.app/user/login', {phoneNumber: data.phoneNumber, password : data.password});
     if (response.status = 200) {
       console.log(response);
       dispatch(login(response.data))
