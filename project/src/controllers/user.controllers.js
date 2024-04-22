@@ -27,7 +27,8 @@ exports.registerUser = asyncHandler(async (req, res) => {
         const { firstname, lastname, phoneNumber, birthdate, password } = req.body;
 
         console.log(req.body);
-          
+
+
           if ( !firstname || !lastname || !phoneNumber || !birthdate || !password) {
             return sendResponse(res , 400 , null , 'All fields are required' )
           }
@@ -37,8 +38,10 @@ exports.registerUser = asyncHandler(async (req, res) => {
   
             return sendResponse(res , 400 , null , 'Phone number already exists' )
           }
-
+            console.log("file agyi....?",req.file);
           const avatarLocalPath = req.file?.path;
+
+          
 
           if (!avatarLocalPath) {
             return sendResponse(res , 400 , null , 'Profile Picture is requierd' )
@@ -80,11 +83,14 @@ exports.registerUser = asyncHandler(async (req, res) => {
           }
   });   
         
-exports.logIn = asyncHandler( async(req , res)=>{
-  const { phoneNumber , password } = req.body
+exports.logIn = asyncHandler( async(req , res) => {
+ try {
+  
+  const { phoneNumber , password } = req.body;
 
-  if (!phoneNumber) {
-    return sendResponse(res , 400 , null , 'Phone Number is required' )
+
+  if (!(phoneNumber)) {
+    return sendResponse(res , 400 , null , 'username or email is required' )
   }
 
  const User = await user.findOne({ phoneNumber: phoneNumber })
@@ -96,8 +102,9 @@ exports.logIn = asyncHandler( async(req , res)=>{
 
  const isPasswordValid = await User.isPasswordCorrect(password)
 
+
 if (!isPasswordValid) {
-  return sendResponse(res , 401 , null , 'Invalid user credentials' )
+  return sendResponse(res , 401 , null , 'Invalid password or PhoneNumber' )
   
   }
 
@@ -114,9 +121,13 @@ const {accessToken, refreshToken} = await generateAccessAndRefereshTokens(User._
  .status(200)
  .cookie("accessToken", accessToken, options)
  .cookie("refreshToken", refreshToken, options)
- .json(
-      sendResponse(res , 200 , loggedInUser , 'User logged In Successfully' )
- )
+ .json({ message: "Login Sucessfull", loggedInUser });
+
+
+} catch (error) {
+return sendResponse(res , 401 , null , '  Pls Provide Proper Credentials' )
+  
+}
 })
 
 exports.logOut = asyncHandler( async(req , res)=>{
@@ -140,7 +151,8 @@ return res
 .status(200)
 .clearCookie("accessToken", options)
 .clearCookie("refreshToken", options)
-.json(sendResponse(res , 200 , {} , 'User logout  Successfully' ))
+.json({ message: "user logout sucessfully "  })
+
 })
 
 exports.refreshAccessToken = asyncHandler( async(req , res)=>{
@@ -178,9 +190,7 @@ exports.refreshAccessToken = asyncHandler( async(req , res)=>{
         .status(200)
         .cookie("accessToken", accessToken, options)
         .cookie("refreshToken", newRefreshToken, options)
-        .json(
-          sendResponse(res , 200 , null , 'Access token refreshed' )
-        )
+        .json({message : 'Access token refreshed'}) 
     } catch (error) {
       sendResponse(res , 401 , error?.message , 'Invalid refresh token' )
         
@@ -188,9 +198,11 @@ exports.refreshAccessToken = asyncHandler( async(req , res)=>{
 })
 
 exports.getCurrentUser = asyncHandler( async(req , res)=>{
+
+  const user1 = req.user
   return res
     .status(200)
-    .json(sendResponse(res , 200 , req.user , 'User fetched successfully' ))
+    .json({message : 'User fetched successfully' , user1 })
 })
 
 
