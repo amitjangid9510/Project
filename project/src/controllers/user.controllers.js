@@ -114,8 +114,8 @@ const {accessToken, refreshToken} = await generateAccessAndRefereshTokens(User._
  const loggedInUser = await user.findById(User._id).select("-password -refreshToken")
 
  const options = {
-     httpOnly: true,
-     secure: true
+     httpOnly: false,
+     secure: false
  }
  console.log(accessToken);
  console.log(refreshToken);
@@ -146,8 +146,8 @@ exports.logOut = asyncHandler( async(req , res)=>{
     }
 )
 const options = {
-    httpOnly: true,
-    secure: true
+    httpOnly: false,
+    secure: false
 }
 
 return res
@@ -183,8 +183,8 @@ exports.refreshAccessToken = asyncHandler( async(req , res)=>{
         }
     
         const options = {
-            httpOnly: true,
-            secure: true
+            httpOnly: false,
+            secure: false
         }
     
         const {accessToken, newRefreshToken} = await generateAccessAndRefereshTokens(User._id)
