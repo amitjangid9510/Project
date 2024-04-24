@@ -11,7 +11,8 @@ exports.getPost = asyncHandler(async (req, res) => {
     const dataa = await user.aggregate([
       {
         $addFields: {
-          birthMonth: { $month: "$birthdate" }
+          birthMonth: { $month: "$birthdate" },
+          birthDate: { $dayOfMonth: "$birthdate" }
         }
       },
       {
