@@ -24,6 +24,14 @@ exports.getPost = asyncHandler(async (req, res) => {
     $sort: {
       birthDate: 1
     }
+  },{
+    $project:{
+      password: 0,
+      updatedAt:0,
+      createdAt:0,
+      birthdate:0,
+      refreshToken:0
+    }
   }
     ]);
 
