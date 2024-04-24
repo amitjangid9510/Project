@@ -12,7 +12,8 @@ exports.getPost = asyncHandler(async (req, res) => {
       {
         $addFields: {
           birthMonth: { $month: "$birthdate" },
-          birthDate: { $dayOfMonth: "$birthdate" }
+          birthDate: { $dayOfMonth: "$birthdate" },
+          birthYear: {$year:"$birthdate"}
         }
       },
       {
