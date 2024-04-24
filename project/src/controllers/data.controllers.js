@@ -20,7 +20,11 @@ exports.getPost = asyncHandler(async (req, res) => {
         $match: {
           birthMonth: currentMonth
         }
-      }
+      },{
+    $sort: {
+      birthDate: 1
+    }
+  }
     ]);
 
     console.log(dataa);
