@@ -1,6 +1,6 @@
 {
   "routes": [
-    { "src": "/api/(.*)", "dest": "https://amit-plum.vercel.app/user" }
+    { "src": "/api/(.*)", "dest": "https://amit-plum.vercel.app/user/$1" }
   ]
 }
 
