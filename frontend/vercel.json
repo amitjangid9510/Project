@@ -4,11 +4,11 @@
   ]
 },{
   "routes": [
-    { "src": "/Home", "dest": "/src/pages/Home.jsx" },
-    { "src": "/UpdateProfile", "dest": "/src/pages/UpdateProfile.jsx" },
-    { "src": "/All-Users", "dest": "/src/pages/All-Users.jsx" },
-    { "src": "/Login", "dest": "/src/pages/Login.jsx" },
-    { "src": "/Registration", "dest": "/src/pages/Registration.jsx" }
+    { "src": "/Home", "dest": "./src/pages/Home.jsx" },
+    { "src": "/UpdateProfile", "dest": "./src/pages/UpdateProfile.jsx" },
+    { "src": "/All-Users", "dest": "./src/pages/All-Users.jsx" },
+    { "src": "/Login", "dest": "./src/pages/Login.jsx" },
+    { "src": "/Registration", "dest": "./src/pages/Registration.jsx" }
   ]
 }
 
