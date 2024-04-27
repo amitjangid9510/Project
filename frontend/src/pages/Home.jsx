@@ -74,7 +74,7 @@ function Home() {
         <img src={`${item.avatar}`} alt={`${item.firstname}`} className="mx-auto mb-4 rounded-full object-cover object-center h-32 w-32" />
         <h2 className="text-xl text-center m-2">{item.firstname}{" "}{item.lastname}</h2>
         <div className="mb-2 text-Black text-center"><strong>B-day :</strong> {item.birthDate}-{item.birthMonth}-{item.birthYear}</div>
-        <div className="mb-2 text-Black font-semibold text-center  text-red-400 ">B-day in {item.birthDate-currentDate} Days</div>
+        <div className="mb-2 text-Black font-semibold text-center  text-red-400 ">Birthday in {item.birthDate-currentDate} Days</div>
         </div></li>))}
     </ul>
     </div>
@@ -87,7 +87,7 @@ function Home() {
         <img src={`${item.avatar}`} alt={`${item.firstname}`} className="mx-auto mb-4 rounded-full object-cover object-center h-32 w-32" />
         <h2 className="text-xl text-center m-2">{item.firstname}{" "}{item.lastname}</h2>
         <div className="mb-2 text-Black text-center"><strong>B-day :</strong> {item.birthDate}-{item.birthMonth}-{item.birthYear}</div>
-        <div className="mb-2 text-Black font-semibold text-center  text-red-400 ">B-day in Next {daysUntilFutureEvent(item.birthDate, item.birthMonth,currentYear)} Days</div>
+        <div className="mb-2 text-Black font-semibold text-center  text-red-400 ">Birthday in Next {daysUntilFutureEvent(item.birthDate, item.birthMonth,currentYear)} Days</div>
         </div></li>))}
     </ul>
     </div>
