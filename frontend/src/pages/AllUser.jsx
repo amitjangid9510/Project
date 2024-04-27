@@ -28,9 +28,9 @@ function AllUser() {
     
   return (
     <div>
-<div className="min-h-screen bg-slate-300 p-6 ">
-<div className="lg:text-3xl font-bold text-black rounded-md m-4 mb-8 text-2xl ">Total User {`(${dataa.length})`} {"  :)"} </div>
-    <div className='bg-slate-500 rounded-md p-7 shadow-lg'>
+<div className="min-h-screen bg-slate-300 md:p-6 p-3">
+<div className="lg:text-3xl font-bold text-black rounded-md text-2xl m-2 mb-4 md:m-4 md:mb-8">Total User {`(${dataa.length})`} {"  :)"} </div>
+    <div className='bg-slate-500 rounded-md shadow-lg p-4 md:p-7'>
     <ul className=" grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
       {dataa.map((item)=> (<li key={item.phoneNumber}><div className="rounded-xl bg-white shadow-lg">
         <img src={`${addCloudinaryTransformation(item.avatar)}`} alt={`${item.firstname}`} className="mx-auto mb-2 rounded-xl" />
