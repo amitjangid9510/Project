@@ -54,7 +54,7 @@ function Home() {
   <div>
         <div className="min-h-screen bg-slate-300 p-6 ">
         <div className="lg:text-3xl font-bold text-black rounded-md m-4 mb-8 text-2xl ">Today's Birthday {":)"}</div>
-        <div className='bg-slate-500 rounded-md p-7 shadow-lg m-5'>
+        <div className='bg-slate-500 rounded-md shadow-lg m-2 p-3 md:m-5'>
         <div className={`${hidden}` }>
         <ul className=" m-4 grid grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
         {TodayBirthday.map((item)=> (<li key={item.phoneNumber}><div className="rounded-xl bg-white p-4 shadow-lg">
@@ -74,7 +74,7 @@ function Home() {
         <img src={`${item.avatar}`} alt={`${item.firstname}`} className="mx-auto mb-4 rounded-full object-cover object-center h-32 w-32" />
         <h2 className="text-xl text-center m-2">{item.firstname}{" "}{item.lastname}</h2>
         <div className="mb-2 text-Black text-center"><strong>B-day :</strong> {item.birthDate}-{item.birthMonth}-{item.birthYear}</div>
-        <div className="mb-2 text-Black font-semibold text-center  text-red-400 ">Birthday in Next {item.birthDate-currentDate} Days</div>
+        <div className="mb-2 text-Black font-semibold text-center  text-red-400 ">B-day in {item.birthDate-currentDate} Days</div>
         </div></li>))}
     </ul>
     </div>
@@ -87,7 +87,7 @@ function Home() {
         <img src={`${item.avatar}`} alt={`${item.firstname}`} className="mx-auto mb-4 rounded-full object-cover object-center h-32 w-32" />
         <h2 className="text-xl text-center m-2">{item.firstname}{" "}{item.lastname}</h2>
         <div className="mb-2 text-Black text-center"><strong>B-day :</strong> {item.birthDate}-{item.birthMonth}-{item.birthYear}</div>
-        <div className="mb-2 text-Black font-semibold text-center  text-red-400 ">Birthday in Next {daysUntilFutureEvent(item.birthDate, item.birthMonth,currentYear)} Days</div>
+        <div className="mb-2 text-Black font-semibold text-center  text-red-400 ">B-day in Next {daysUntilFutureEvent(item.birthDate, item.birthMonth,currentYear)} Days</div>
         </div></li>))}
     </ul>
     </div>
