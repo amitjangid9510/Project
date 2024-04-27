@@ -4,8 +4,7 @@
   ]
 },{
   "routes": [
-    { "src": "/Login", "dest": "./src/pages/Login.jsx" },
-    { "src": "/Registration", "dest": "./src/pages/Registration.jsx" },
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
 
