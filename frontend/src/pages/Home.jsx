@@ -81,7 +81,7 @@ function Home() {
 
  
         <div className="lg:text-3xl font-bold text-Black rounded-md m-4 mb-8 text-2xl ">Upcoming Next Month Birthday's :</div>
-        <div className={` bg-slate-500 rounded-md p-7 shadow-lg m-5` }>
+        <div className={` bg-slate-500 shadow-lg  m-2 p-3 md:m-5` }>
         <ul className=" m-4 grid grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {NetxMonth.map((item)=> (<li key={item.phoneNumber}><div className="rounded-xl bg-white p-4 shadow-lg">
         <img src={`${item.avatar}`} alt={`${item.firstname}`} className="mx-auto mb-4 rounded-full object-cover object-center h-32 w-32" />
