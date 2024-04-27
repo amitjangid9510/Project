@@ -44,7 +44,7 @@ function Navbar() {
               <li key={item.name}>
                 <button
                 onClick={() => navigate(item.slug)}
-                className=' hover:bg-blue-300 text-white font-bold py-2 px-4 rounded-full hover:text-black'
+                className='hover:bg-blue-300 text-white font-bold rounded-full hover:text-black md:py-2 md:px-2 py-1 px-1'
                 >{item.name}</button>
               </li>
             ) : null)}
