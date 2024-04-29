@@ -10,18 +10,11 @@ This repository contains the code for a full-stack website with login/logout fun
 **Features**  
 
 **User Authentication:** Implement a secure login/logout system for users.  
-
 **Database Operations:** Perform CRUD operations on the database to manage data.  
-
 **File Management:** Allow users to upload images and manage files.  
-
 **Aggregation Pipeline Logic:** Utilize aggregation pipeline logic to structure and process data before sending it to the frontend.  
-
 **React.js Frontend:** Develop a frontend interface using React.js, utilizing component-style development.  
-
 **Responsive Design:** Ensure the website is responsive across various devices using Tailwind CSS.    
-
-
 
 **Technologies Used**
 Frontend:
