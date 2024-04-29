@@ -1,4 +1,6 @@
-Full-Stack Website README  
+Full-Stack Website
+
+**Project Live Link:** https://amit-project.vercel.app
 
 **Overview**  
 
@@ -9,46 +11,39 @@ This repository contains the code for a full-stack website with login/logout fun
 
 **User Authentication:** Implement a secure login/logout system for users.  
 
-Database Operations: Perform CRUD operations on the database to manage data.  
+**Database Operations:** Perform CRUD operations on the database to manage data.  
 
-File Management: Allow users to upload images and manage files.  
+**File Management:** Allow users to upload images and manage files.  
 
-Aggregation Pipeline Logic: Utilize aggregation pipeline logic to structure and process data before sending it to the frontend.  
+**Aggregation Pipeline Logic:** Utilize aggregation pipeline logic to structure and process data before sending it to the frontend.  
 
-React.js Frontend: Develop a frontend interface using React.js, utilizing component-style development.  
+**React.js Frontend:** Develop a frontend interface using React.js, utilizing component-style development.  
 
-Responsive Design: Ensure the website is responsive across various devices using Tailwind CSS.    
+**Responsive Design:** Ensure the website is responsive across various devices using Tailwind CSS.    
 
 
 
 **Technologies Used**
 Frontend:
 React.js
+react hook forms
+react query
+redux toolkit
 Tailwind CSS
 Backend:
-[List backend technologies/frameworks]
+Express JS 
+JWT
+multer 
+cloudinary
+vercel
+
+
 Database:
-[List database technology]
-Installation
-To run this project locally, follow these steps:
+MongoDB
+mongoos Schema
 
-Clone this repository to your local machine.
-Navigate to the project directory.
-Install dependencies using the package manager of your choice (e.g., npm or yarn):
-bash
-Copy code
-npm install
-[Additional steps for backend setup, database setup, etc.]
-Usage
-[Provide instructions on how to use the project, including any configuration steps, starting the server, etc.]
-
-Contributing
-Contributions are welcome! Please follow the guidelines in CONTRIBUTING.md.
-
-License
-This project is licensed under the MIT License.
 
 Contact
-[Your Name] - [Your Email]
+Amit jangid - amitjangid9510@gmail.com
 
-Project Link: [GitHub Repository Link]
+
