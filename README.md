@@ -16,20 +16,21 @@ This repository contains the code for a full-stack website with login/logout fun
 **React.js Frontend:** Developed a frontend interface using React.js, utilizing component-style development.  
 **Responsive Design:** website is responsive across various devices achived by using Tailwind CSS .    
 
-**Technologies Used**
+**Technologies Used**  
+
 Frontend:
 React.js,
 react hook forms,
 react query,
 redux toolkit,
-Tailwind CSS,
+Tailwind CSS,  
+
 Backend:
 Express JS,
 JWT,
 multer ,
 cloudinary,
-vercel,
-
+vercel,  
 
 Database:
 MongoDB,
