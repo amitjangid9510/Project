@@ -1,4 +1,4 @@
-import React, { useEffect, useState , useMemo } from 'react'
+import React, { useEffect, useState  } from 'react'
 import axios from 'axios';
 
 function Home() {
@@ -51,11 +51,6 @@ function Home() {
 
     },[])
 
-
-  const memoizedData1 = useMemo(() => dataa, [dataa])
-  const memoizedData2 = useMemo(() => TodayBirthday, [TodayBirthday])
-  const memoizedData3 = useMemo(() => NetxMonth, [NetxMonth])
-    
   return (
   <div>
         <div className="min-h-screen bg-slate-300 p-6 ">
