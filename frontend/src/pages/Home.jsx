@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState , useMemo } from 'react'
 import axios from 'axios';
 
 function Home() {
 
   const[dataa , setdata ]=useState([])
   const[TodayBirthday , setTodayBirthday ]=useState([])
+   const[NetxMonth , setNetxMonth ]=useState([])
   const[hidden , sethidden ]=useState("")
-  const[NetxMonth , setNetxMonth ]=useState([])
+ 
   const today = new Date();
 
   const currentDate = today.getDate();
@@ -49,6 +50,11 @@ function Home() {
       getPost()
 
     },[])
+
+
+  const memoizedData1 = useMemo(() => dataa, [dataa])
+  const memoizedData2 = useMemo(() => TodayBirthday, [TodayBirthday])
+  const memoizedData3 = useMemo(() => NetxMonth, [NetxMonth])
     
   return (
   <div>
