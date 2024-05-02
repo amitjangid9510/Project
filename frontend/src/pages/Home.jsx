@@ -54,9 +54,10 @@ function Home() {
   return (
   <div>
         <div className="min-h-screen bg-slate-300 p-6 ">
+        <div className={`${hidden}` }>
         <div className="lg:text-3xl font-bold text-black rounded-md m-4 mb-8 text-2xl ">Today's Birthday {":)"}</div>
         <div className='bg-slate-500 rounded-md shadow-lg m-2 p-3 md:m-5'>
-        <div className={`${hidden}` }>
+        
         <ul className=" m-4 grid grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
         {TodayBirthday.map((item)=> (<li key={item.phoneNumber}><div className="rounded-xl bg-white p-4 shadow-lg">
         <img src={`${item.avatar}`} alt={`${item.firstname}`} className="mx-auto mb-4 rounded-full object-cover object-center h-32 w-32" />
